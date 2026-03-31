@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Churchill, Canada - Tourist Bulletin</title>
+<script>window.addEventListener('message', function(event) { 
+					if( !event.data ) {
+						return;
+					}
+
+					let params;
+					try {
+						params = JSON.parse( event.data );
+					}
+					catch {
+						return;
+					}
+					if( !params.subject || params.subject !== 'lti.frameResize' ) {
+						return;
+					}
+
+					const MAX_FRAME_HEIGHT = 10000;
+					if( !params.height || params.height < 1 || params.height > MAX_FRAME_HEIGHT ) {
+						console.warn( 'Invalid height value received, aborting' );
+						return;
+					}
+					const el = document.getElementsByTagName( 'iframe' );
+					for ( let i=0; i < el.length; i++ ) {
+						if( el[i].contentWindow === event.source ) {
+							el[i].style.height = params.height + 'px';
+
+							console.info( 'Setting iFrame height to ' + params.height );
+
+							if( el[i].getAttribute('lockwidth') !== 'true'){
+								el[i].style.width = '100%';
+								console.info( 'Setting iFrame width to 100%' );
+							}
+						}
+					}
+				});</script><script src="https://s.brightspace.com/lib/bsi/2026.3.232/unbundled/embeds.js" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					window.D2L.EmbedRenderer.renderEmbeds(document.body);
+				});</script><script src="https://s.brightspace.com/lib/bsi/2026.3.232/unbundled/mathjax.js" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					if (document.querySelector('math, .d2l-element, .d2l-cplus-layout') || /\$\$|\\\(|\\\[|\\begin{|\\ref{|\\eqref{/.test(document.body.innerHTML)) {
+						document.querySelectorAll('mspace[linebreak="newline"]').forEach(elm => {
+							elm.setAttribute('style', 'display: block; height: 0.5rem;');
+						});
+
+						document.querySelectorAll('math mmultiscripts > none').forEach(elm => {
+							const mrow = document.createElementNS('http://www.w3.org/1998/Math/MathML', 'mrow');
+							elm.replaceWith(mrow);
+						});
+
+						window.D2L.MathJax.loadMathJax({
+							outputScale: 1.5,
+							renderLatex: false,
+							enableMML3Support: false
+						});
+					}
+				});</script><script src="https://s.brightspace.com/lib/bsi/2026.3.232/unbundled/prism.js" type="module"></script><script>document.addEventListener('DOMContentLoaded', function() {
+					document.querySelectorAll('.d2l-code').forEach(code => {
+						window.D2L.Prism.formatCodeElement(code, false);
+					});
+				});</script><script src="https://s.brightspace.com/lib/bsi/2026.3.232/unbundled/creator.js" type="module"></script><script>document.addEventListener('DOMContentLoaded', async () => {
+					const activities = [];
+					const practices = [];
+					const allPractices = document.querySelectorAll('.d2l-practice');
+					const elements = document.querySelectorAll('.d2l-element');
+					let layouts = [...document.querySelectorAll('.d2l-cplus-layout')];
+					const tables = document.querySelectorAll('table');
+					const contentStylerStyleLinks = document.querySelectorAll('head > link[href="https://templates.lcs.brightspace.com/lib/assets/css/styles.min.css"]');
+					const contentStylerOverides = document.querySelectorAll('head > link[href^="/d2l/le/contentstyler/"][data-override="override"]');
+
+					layouts = layouts.filter((layout) => layout.closest('.d2l-element.mceNonEditable') === null);
+
+					for (const practice of allPractices) {
+						const activityContainer = practice.hasAttribute('data-d2l-activity-href');
+						if (activityContainer) {
+							activities.push(practice);
+						}
+						else {
+							practices.push(practice);
+						}
+					}
+
+					if (layouts.length > 0) {
+						window.D2L.Creator.convertLayouts(layouts);
+					}
+					if (elements.length > 0) {
+						window.D2L.Creator.convertElements(elements, 6606, '/content/');
+					}
+					if (activities.length > 0) {
+						window.D2L.Creator.convertPracticeActivities(activities, 6606, '/content/');
+					}
+					if (practices.length > 0) {
+						window.D2L.Creator.convertPractices(practices, 6606, '/content/');
+					}
+					if (contentStylerStyleLinks.length > 0 && contentStylerOverides.length > 0 && tables.length > 0) {
+						window.D2L.Creator.wrapTables(tables);
+					}
+				});</script><script>function lti_launch( vars, target ) {
+					var query = '';
+					var new_tab = false;
+
+					for(var key in vars) {
+						if(query.length == 0) {
+							query += '?' + key + '=' + encodeURIComponent(vars[key]);
+						}
+						else {
+							query += '&' + key + '=' + encodeURIComponent(vars[key]);
+						}
+					}
+
+					var url = '/d2l/customization/pearsonlti/6606/Launch' + query;(target == '_blank') ? window.open( url, '_blank' ) : location.replace( url );}</script></head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Churchill, Canada</h1>
+        <p>Your gateway to the Polar Bear Capital of the World</p>
+    </header>
+<!-- add image -->
+<div class="image-container">
+<img id="polarbears" src="churchill1.jpg" alt="It's a polar bear!! It's going to eat you!" > 
+</div>
+
+    <!-- Main Content Section -->
+    <main>
+
+        <!-- Introduction Section -->
+        <section id="introduction">
+            <h2>Explore the Wonders of Churchill</h2>
+            <p>
+                Churchill, located on the shores of Hudson Bay in Manitoba, is a remote yet enchanting destination that offers an unparalleled glimpse into the wild beauty of the Canadian North. Known as the "Polar Bear Capital of the World," Churchill attracts visitors from all over the globe to witness its wildlife, culture, and natural landscapes.
+            </p>
+            <p>
+                From November to March, Churchill becomes a prime location for viewing the Northern Lights (Aurora Borealis). Its clear, dark skies provide the perfect backdrop for one of nature's most stunning light shows.
+            </p>
+        </section>
+
+        <!-- Polar Bears Section -->
+        <section id="wildlife">
+            <h2>Polar Bears and Wildlife</h2>
+            <p>
+                Churchill is famous for its polar bears, which migrate through the region as they travel toward the Hudson Bay. Visitors can embark on unique tours in specialized tundra vehicles to safely observe these magnificent creatures in their natural habitat.
+            </p>
+        </section>
+
+        <!-- Northern Lights Section -->
+        <section id="northern-lights">
+            <h2>Northern Lights in Churchill</h2>
+            <p>
+                During the winter months, Churchill offers some of the best views of the Northern Lights. Tourists can enjoy guided tours, which include photography workshops, aurora viewing platforms, and cozy accommodations under the dancing lights.
+            </p>
+        </section>
+<div class="image-container">
+    <img id="image2" src="churchill2.jpg" alt="Picture of the northern lights">
+</div>
+        <!-- Adventure Section -->
+        <section id="adventure">
+            <h2>Adventure Awaits in Churchill</h2>
+            <ul>
+                <li>Polar Bear Viewing Tours</li>
+                <li>Beluga Whale Watching</li>
+                <li>Dog Sledding Adventures</li>
+                <li>Historical Fort Prince of Wales Tours</li>
+                <li>Kayaking and Canoeing in Hudson Bay</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Churchill Tourism Board | Discover the Magic of the North</p>
+    </footer>
+
+</body>
+</html>

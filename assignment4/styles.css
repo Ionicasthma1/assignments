@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: blue;
+}
+
+
+
+header > p {
+    color: green;
+    font-weight: bold;
+}
+
+main:nth-child(odd) {
+    color: red;
+}
+
+/* #myheader{
+    color: red;
+} */
+
+header {
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
+
+#polarbears{
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+section {
+    padding: 24px;
+    line-height: 30px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: blue;
+    color: lime;
+}
+
+.image-container {
+    text-align: center;
+}
+
+#image2 {
+    border: 5px solid blue;
+    border-radius: 10px;
+
+}

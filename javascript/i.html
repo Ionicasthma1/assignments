@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- can either add defer, or put script tag at end of body -->
+     <style>
+        /* .visible {
+            display: inline;
+        } */
+
+        .hidden {
+            display: none;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+        
+        .messageContainer {
+            width: 200px;
+            border-radius: 10px;
+            background-color: #2f2f2f;
+            color: white;
+            padding: 20px;
+        }
+
+     </style>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Hello world</h1>
+        <p>This is a page for practicing with JavaScript</p>
+    </header>
+    <div id="container">
+        <button id="popup-button" >Click me!</button>
+        <button id="show-image" >Hide Image</button>
+        <img id="my-image" src="lemur.jpg" width="200" alt="">
+    </div>
+
+    <div>
+        <input type="text" name="message" id="message">
+        <button id="submitBtn" >Submit</button>
+    </div>
+    <div class="messageContainer">
+        Message:<span id="displayMessage"></span>
+    </div>
+
+     <button onclick="changeBackground()">Change Background</button>
+
+        <button onclick="goToGoogle()">Go to Google</button>
+    
+     
+</body>
+</html>

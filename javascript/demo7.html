@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Dashboard</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+        <h1 id="mainTitle">Threat Monitoring Dashboard</h1>
+    </header>
+
+    <main>
+        <section id="alerts">
+            <h2>Threat Alerts</h2>
+            <label>
+                <input type="radio" name="enableAlert" id="enableAlert"> Enable Alert Button
+            </label>
+            <button id="alertBtn" disabled>Show Alert</button>
+        </section>
+
+        <section id="newImage">
+            <h2>Security Image</h2>
+            <button id="addImageBtn">Add Image</button>
+        </section>
+
+        <section id="redirect">
+            <h2>Visit Security Page</h2>
+            <button id="redirectBtn">Go to External Site</button>
+        </section>
+
+        <!-- New section to replace the H1 text -->
+        <section id="changeTitle">
+            <h2>Change Title</h2>
+            <input type="text" id="titleInput" placeholder="Enter new title">
+            <button id="changeTitleBtn">Change Title</button>
+        </section>
+
+        <!-- New section to change the background color -->
+        <section id="backgroundChange">
+            <h2>Change Background Color</h2>
+            <label>
+                <input type="radio" name="bgColor" value="lightblue"> Light Blue
+            </label>
+            <label>
+                <input type="radio" name="bgColor" value="lightgreen"> Light Green
+            </label>
+            <label>
+                <input type="radio" name="bgColor" value="lightcoral"> Light Coral
+            </label>
+            <button id="changeBgBtn">Change Background</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Cybersecurity Dashboard &copy; 2024</p>
+    </footer>
+
+    <script src="script1.js"></script>
+</body>
+</html>
